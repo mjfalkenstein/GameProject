@@ -11,5 +11,6 @@ In-combat would be almost along the lines of frozen synapse, where the player es
 character, which are then carried out simulatneously. For example, when a combat sequence begins, the player might have the tank walk up
 to the enemy and taunt, while the other character performs ranged attacks. 
 
-The game could switch between these two states when the player is spotted by an enemy NPC, and when all enemies in combat are defeated, or
-the player chooses to flee the battle. 
+The game could switch between these two states when the player is spotted by an enemy NPC, and when all enemies in combat are defeated, or the player chooses to flee the battle. 
+
+The in-combat and out-of-combat states exist only while the player is in a "town" (any sort of instance, could be a town, dungeon, whatever). When the player wants to move between towns, they bring up a world map and essentially fast-travel to places. Depending on story context, there would be a probability that the party is attacked on the road to the destination. When the player fast-travels, none of the characters may be in combat, and the entire party fast-travels together. 
