@@ -7,7 +7,7 @@ public:
 	typedef void(*function)(void);
 	// TODO other functions
 	virtual void signal() = 0;
-	static Thread* create(function pred);
+	static Thread* create(function cmd);
 };
 
 }

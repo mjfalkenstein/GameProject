@@ -7,8 +7,8 @@ using Engine::Thread;
 
 class InternalThread : public Thread {
 public:
-	InternalThread(function cmd) : thread(execute, this) {
-		command = cmd;
+	InternalThread(function cmd) : command(cmd) {
+		thread = std::thread(execute, this);
 	}
 
 	virtual void signal() {
@@ -35,3 +35,7 @@ private:
 		instance->run();
 	}
 };
+
+Thread* Thread::create(function cmd) {
+	return new InternalThread(cmd);
+}
