@@ -25,9 +25,6 @@ public:
 	// Virtual destructor
 	~Thread();
 
-	// This function is called by the thread
-	void run();
-
 	// Signals the thread to stop waiting
 	void signal();
 
@@ -48,6 +45,7 @@ private:
 	std::atomic<bool> waiting;
 	std::function<void()> delegate;
 	std::condition_variable condition;
+	void run();
 };
 
 }
