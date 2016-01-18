@@ -2,25 +2,27 @@
 #include <stdio.h>
 #include <string.h>
 
+// stop microsofts crusade against cstdlib (for scanf)
+#pragma warning(disable: 4996)
+
 // This is just a silly test of the thread class
 // An actual use case would be to add work to a queue
 // and signal the thread when work is added, so that
 // the thread isnt just constantly spinning
 
-using Engine::Thread;
 char buffer[512];
 
-void command() {
-	printf("Command called: %s\n");
+void testThread() {
+	printf("Command called: %s\n", buffer);
 }
 
 int main() {
-	Thread* thread = Thread::create(command);
-	
+	Engine::Thread thread(testThread);
+
 	do {
-		scanf_s("%s\n", buffer);
-		thread->signal();
+		scanf("%s", buffer);
+		thread.signal();
 	} while (strcmp(buffer, "quit") != 0);
 
-	delete thread;
+	return 0;
 }

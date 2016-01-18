@@ -1,41 +1,40 @@
 #include "Thread.h"
-#include <mutex>
-#include <thread>
-#include <condition_variable>
 
-using Engine::Thread;
+namespace Engine {
 
-class InternalThread : public Thread {
-public:
-	InternalThread(function cmd) : command(cmd) {
-		thread = std::thread(execute, this);
+Thread::Thread(std::function<void()> fn) : running(true), waiting(true) {
+	delegate = fn;
+	thread = std::thread(&Thread::run, this);
+}
+
+Thread::~Thread() {
+	stop(); // Make sure the thread stops
+	thread.join();
+}
+
+void Thread::signal() {
+	condition.notify_all();
+}
+
+void Thread::stop() {
+	running = false;
+	signal();
+}
+
+bool Thread::isWaiting() {
+	return waiting;
+}
+
+void Thread::run() {
+	while (running) {
+		// Sleep until signaled
+		std::unique_lock<std::mutex> lock(mutex);
+		condition.wait(lock);
+		// Run once and repeat
+		waiting = false;
+		if (running) delegate();
+		waiting = true;
 	}
+}
 
-	virtual void signal() {
-		condition.notify_one();
-	}
-
-private:
-	std::mutex mutex;
-	std::thread thread;
-	std::condition_variable condition;
-	function command;
-
-	void run() {
-		while (true) {
-			// Sleep until signaled
-			std::unique_lock<std::mutex> lock(mutex);
-			condition.wait(lock);
-			// Run command once, then repeat
-			command();
-		}
-	}
-
-	static void execute(InternalThread* instance) {
-		instance->run();
-	}
-};
-
-Thread* Thread::create(function cmd) {
-	return new InternalThread(cmd);
 }
