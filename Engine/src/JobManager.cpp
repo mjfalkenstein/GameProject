@@ -73,6 +73,7 @@ void JobManager::addJob(Job* job) {
 	}
 	else {
 		queueTail->next = node;
+		queueTail = node;
 	}
 	pending++;
 	for (auto& thread : threads)
