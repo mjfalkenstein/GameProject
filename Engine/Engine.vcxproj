@@ -19,11 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Thread.h" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="src\JobManager.cpp" />
+    <ClCompile Include="src\JobManagerTest.cpp" />
     <ClCompile Include="src\Thread.cpp" />
     <ClCompile Include="src\ThreadTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\JobManager.h" />
+    <ClInclude Include="src\EngineInternals.h" />
+    <ClInclude Include="src\Thread.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F586FEC0-7FF6-4788-82B1-8D0A7D49F345}</ProjectGuid>
@@ -81,7 +85,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>./include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./include;./src</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

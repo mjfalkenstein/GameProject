@@ -1,7 +1,5 @@
 #include "Thread.h"
 
-namespace Engine {
-
 Thread::Thread(std::function<void()> fn) : running(true), waiting(true) {
 	delegate = fn;
 	thread = std::thread(&Thread::run, this);
@@ -35,6 +33,4 @@ void Thread::run() {
 		if (running) delegate();
 		waiting = true;
 	}
-}
-
 }

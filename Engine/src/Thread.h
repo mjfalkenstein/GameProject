@@ -4,6 +4,8 @@
  *	A persistent thread class. Once started, it will wait until signaled,
  *	then call the delegate function, repeating until the stop function or
  *	destructor is called
+ *	This is an internal class in the engine and not intended to be used
+ *	directly, hence it being in the src directory
  */
 #pragma once
 
@@ -14,8 +16,6 @@
 #include <thread>
 #include <atomic>
 #include <mutex>
-
-namespace Engine {
 
 class Thread {
 public:
@@ -47,5 +47,3 @@ private:
 	std::condition_variable condition;
 	void run();
 };
-
-}
