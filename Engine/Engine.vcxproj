@@ -21,11 +21,13 @@
   <ItemGroup>
     <ClCompile Include="src\JobManager.cpp" />
     <ClCompile Include="src\JobManagerTest.cpp" />
+    <ClCompile Include="src\System.cpp" />
     <ClCompile Include="src\Thread.cpp" />
     <ClCompile Include="src\ThreadTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\JobManager.h" />
+    <ClInclude Include="include\System.h" />
     <ClInclude Include="src\EngineInternals.h" />
     <ClInclude Include="src\Thread.h" />
   </ItemGroup>
