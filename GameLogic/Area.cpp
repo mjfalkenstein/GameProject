@@ -21,3 +21,15 @@ void Area::setWidth(float w) {
 void Area::setHeight(float h) {
 	height = h;
 }
+
+void Area::setCallback(Character c, std::function<void()> f) {
+	character = c;
+	event = f;
+}
+
+void update() {
+	if (contains(character)) {
+		if(event != NULL)
+			event();
+	}
+}
