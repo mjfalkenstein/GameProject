@@ -2,6 +2,7 @@
 
 #include "System.h"
 #include "JobManager.h"
+#include "EventManager.h"
 #include "EngineInternals.h"
 
 #include <thread>
@@ -30,7 +31,21 @@ class TestJob2 : public JobManager::Job {
 	}
 } job2;
 
+struct TestEvent {
+	int value;
+};
+
+void handler(const TestEvent& event) {
+	println("Event received: ", event.value);
+}
+
 int main() {
+	EventManager::subscribe<TestEvent>(handler);
+	
+	TestEvent a{ 1 }, b{ 2 };
+	EventManager::dispatch(a);
+	EventManager::dispatch(b);
+
 	println("Initializing on thread ", thread_id);
 	srand(time(0));
 	system("pause");
