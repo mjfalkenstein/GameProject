@@ -36,7 +36,7 @@ int main() {
 	system("pause");
 	JobManager::initialize();
 	// add 100 job2's to the queue
-	for (uint32_t i = 0; i < 100; i++)
+	for (int i = 0; i < 100; i++)
 		JobManager::addJob(&job2);
 	JobManager::wait();
 	system("pause");
