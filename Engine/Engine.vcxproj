@@ -26,6 +26,7 @@
     <ClCompile Include="src\ThreadTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\EventManager.h" />
     <ClInclude Include="include\JobManager.h" />
     <ClInclude Include="include\System.h" />
     <ClInclude Include="src\EngineInternals.h" />

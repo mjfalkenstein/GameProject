@@ -4,6 +4,14 @@ Game takes place on a tidal-locked planet orbiting a red dwarf, creating a plane
 belt of livable land that encircles the planet. This belt is broken in two places, once near the north pole by a large mountain range,
 and once abount 1/3 of the way around the belt by a large ocean (unsure about ocean, might not be geologically possible). 
 
+##########################################################################################
+Some cool ideas about tidally locked planets that might be interesting to keep in mind. You're right in assuming that the tidally locked planet will only have a hospitable zone in between the light side and the dark side. However, there are a few interesting effects: 
+  1. Liquid water can only exist in the habitable zone.
+  2. The freezing temperatures of the dark side would lead to much of the atmosphere condensing into solid form, whereas the hot temperatures of the light side would keep most things in vapor form. This creates a huge pressure difference. The result of this would most likely be massive and endless storms between the two zones. (In reality this would probably make the "hospitable zone" inhospitable, but it could be a cool setting thing to keep in mind)
+     a. As a spinoff of this, if you wanted to keep in mind the storms, you could have a significant portion of the life existing underground. Also, the crazy winds would lead to some hardcore erosion and crazy geological formations, so that might be something to keep in mind for concept design.
+  3. Since the planet is locked facing the star in one direction, there is no day/night cycle and the hospitable ring is in endless twilight. Probably this would mean the star is very low in the sky, and the already red light from the star would be accentuated by the atmosphere to cause the sky to be red all the time in this zone. (Depending on the makeup of the atmosphere, it'd probably still be blueish in the light area)
+##########################################################################################
+
 People living on the planet are humanoids (as opposed to alien-looking). Are the remnants of near-future humans who were
 searching for a planet to exploit for resources. 
 
