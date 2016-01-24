@@ -1,6 +1,6 @@
 #include "Thread.h"
-#include <stdio.h>
-#include <string.h>
+#include "System.h"
+#include "EventManager.h"
 
 // Stop microsofts crusade against cstdlib (for scanf)
 // I doubt buffer overruns will matter in this test
@@ -13,15 +13,25 @@
 
 char buffer[512];
 
-void testThread() {
-	printf("Command called: %s\n", buffer);
+void testHandler2(const TestEvent& evt) {
+	println("Event received by handler 2: ", evt.value);
 }
+
+void testThread() {
+	static int counter = 0;
+	println("Command called: ", (const char*)buffer);
+	TestEvent e{ ++counter };
+	EventManager::dispatch<TestEvent>(e);
+}
+
+
 
 // rename to main to test
 int threadTest() {
 	Thread thread(testThread);
+	EventManager::subscribe<TestEvent>(&testHandler2);
 
-	printf("Enter a string, or \"quit\" to exit\n");
+	println("Enter a string, or \"quit\" to exit");
 	do {
 		scanf("%s", buffer);
 		thread.signal();

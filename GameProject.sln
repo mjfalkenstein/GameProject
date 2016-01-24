@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcxproj", "{F586FEC0-7FF6-4788-82B1-8D0A7D49F345}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameLogic", "GameLogic\GameLogic.vcxproj", "{560D7CBD-BD26-4938-B263-814CF39B902A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{F586FEC0-7FF6-4788-82B1-8D0A7D49F345}.Release|x64.Build.0 = Release|x64
 		{F586FEC0-7FF6-4788-82B1-8D0A7D49F345}.Release|x86.ActiveCfg = Release|Win32
 		{F586FEC0-7FF6-4788-82B1-8D0A7D49F345}.Release|x86.Build.0 = Release|Win32
+		{560D7CBD-BD26-4938-B263-814CF39B902A}.Debug|x64.ActiveCfg = Debug|x64
+		{560D7CBD-BD26-4938-B263-814CF39B902A}.Debug|x64.Build.0 = Debug|x64
+		{560D7CBD-BD26-4938-B263-814CF39B902A}.Debug|x86.ActiveCfg = Debug|Win32
+		{560D7CBD-BD26-4938-B263-814CF39B902A}.Debug|x86.Build.0 = Debug|Win32
+		{560D7CBD-BD26-4938-B263-814CF39B902A}.Release|x64.ActiveCfg = Release|x64
+		{560D7CBD-BD26-4938-B263-814CF39B902A}.Release|x64.Build.0 = Release|x64
+		{560D7CBD-BD26-4938-B263-814CF39B902A}.Release|x86.ActiveCfg = Release|Win32
+		{560D7CBD-BD26-4938-B263-814CF39B902A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

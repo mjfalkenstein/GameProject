@@ -7,15 +7,11 @@ namespace EventManager {
 
 // Ignore this templated helper class
 template<class T>
-class EventHelper {
-public:	// tbh this is one of the most disgusting templates I've ever made
-	typedef std::function<void(const T&)> Callback;
-	std::vector<Callback> subscribers;
-	static EventHelper<T>& get() {
-		static EventHelper<T> instance;
-		return instance;
-	}
-};
+struct EventHelper {
+	static std::vector<std::function<void(const T&)>> subscribers;
+}; // Templates are pretty neat
+template<class T>
+std::vector<std::function<void(const T&)>> EventHelper<T>::subscribers;
 
 // Subscribe to all events of type T
 // Ex: subscribe<KeyEvent>(&keyHandler)
@@ -23,19 +19,23 @@ public:	// tbh this is one of the most disgusting templates I've ever made
 // just make a struct or something, Ex: if 2 events are
 // int type then both will be treated as the same kind
 template<class T>
-void subscribe(typename EventHelper<T>::Callback handler) {
+void subscribe(std::function<void(const T&)> handler) {
 	// TODO: check for duplicates, add unsubscribe(handler) function
 	// TODO: lock sub/unsub functions for multithreading
-	EventHelper<T>::get().subscribers.push_back(handler);
+	EventHelper<T>::subscribers.push_back(handler);
 }
 
 // Dispatch an event of type T to all of its subscribers
 // Ex: dispatch<KeyEvent>(getKeyPressed())
 template<class T>
 void dispatch(const T& event) {
-	for (auto& handler : EventHelper<T>::get().subscribers) {
+	for (auto& handler : EventHelper<T>::subscribers)
 		handler(event);
-	}
 }
 
 }
+
+// Used in testing, can be removed at some point
+struct TestEvent {
+	int value;
+};
