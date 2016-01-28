@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall -std=c++1y   CMakeFiles/Game.dir/src/Area.cpp.o CMakeFiles/Game.dir/src/Entity.cpp.o CMakeFiles/Game.dir/src/Sprite.cpp.o CMakeFiles/Game.dir/src/Spritesheet.cpp.o CMakeFiles/Game.dir/src/NonPlayable.cpp.o CMakeFiles/Game.dir/src/Playable.cpp.o CMakeFiles/Game.dir/src/Character.cpp.o CMakeFiles/Game.dir/src/Vec2f.cpp.o  -o ../build/Game -rdynamic 
