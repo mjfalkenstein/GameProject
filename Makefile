@@ -124,17 +124,17 @@ Engine/fast:
 .PHONY : Engine/fast
 
 #=============================================================================
-# Target rules for targets named GameLogic
+# Target rules for targets named Game
 
 # Build rule for target.
-GameLogic: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GameLogic
-.PHONY : GameLogic
+Game: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Game
+.PHONY : Game
 
 # fast build rule for target.
-GameLogic/fast:
-	$(MAKE) -f GameLogic/CMakeFiles/GameLogic.dir/build.make GameLogic/CMakeFiles/GameLogic.dir/build
-.PHONY : GameLogic/fast
+Game/fast:
+	$(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/build
+.PHONY : Game/fast
 
 # Help Target
 help:
@@ -145,7 +145,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Engine"
-	@echo "... GameLogic"
+	@echo "... Game"
 .PHONY : help
 
 

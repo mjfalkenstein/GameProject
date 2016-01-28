@@ -1,4 +1,4 @@
-# Install script for directory: /home/kevin/programming/GameProject/Engine
+# Install script for directory: /home/kevin/programming/GameProject/Game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

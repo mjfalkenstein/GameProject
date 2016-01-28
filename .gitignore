@@ -212,3 +212,9 @@ _Pvt_Extensions/
 ModelManifest.xml
 *.opendb
 *.filters
+
+*.cmake
+CMakeFiles/
+Engine/CMakeFiles
+Game/CMakeFiles
+CMakeCache.txt
