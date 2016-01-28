@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../build/libEngine.a  CMakeFiles/Engine.dir/src/Thread.cpp.o CMakeFiles/Engine.dir/src/JobManagerTest.cpp.o CMakeFiles/Engine.dir/src/System.cpp.o CMakeFiles/Engine.dir/src/JobManager.cpp.o CMakeFiles/Engine.dir/src/ThreadTest.cpp.o
-/usr/bin/ranlib ../build/libEngine.a

@@ -1,4 +1,0 @@
-class Spritesheet {
-public:
-private:
-};
