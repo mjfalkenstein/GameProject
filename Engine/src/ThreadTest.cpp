@@ -1,6 +1,7 @@
 #include "Thread.h"
 #include "System.h"
 #include "EventManager.h"
+#include <string.h>
 
 // Stop microsofts crusade against cstdlib (for scanf)
 // I doubt buffer overruns will matter in this test

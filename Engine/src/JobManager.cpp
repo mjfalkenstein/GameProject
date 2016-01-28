@@ -2,6 +2,7 @@
 #include "Thread.h"
 #include "EngineInternals.h"
 #include <vector>
+#include <cstring>
 
 using JobManager::Job;
 
@@ -38,7 +39,7 @@ void JobManager::initialize() {
 	// Spawn worker threads, leave one core for the main thread
 	auto nThreads = std::thread::hardware_concurrency() - 1;
 	while (nThreads > 0) {
-		threads.emplace_back(std::make_unique<Thread>(processJobs));
+		threads.emplace_back(std::unique_ptr<Thread>(new Thread(processJobs)));
 		nThreads--;
 	}
 }

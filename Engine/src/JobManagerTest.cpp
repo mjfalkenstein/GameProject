@@ -1,5 +1,3 @@
-#pragma once
-
 #include "System.h"
 #include "JobManager.h"
 #include "EventManager.h"
@@ -11,7 +9,7 @@
 #include <random>
 #include <time.h>
 
-std::atomic<int> counter = 0;
+std::atomic<int> counter(0);
 thread_local int thread_id = counter++;
 
 struct OtherEvent {

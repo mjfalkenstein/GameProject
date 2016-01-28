@@ -1,6 +1,7 @@
 #include "System.h"
 #include <stdio.h>
 #include <mutex>
+#include <cstring>
 
 std::recursive_mutex printLock;
 
