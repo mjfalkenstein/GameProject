@@ -213,8 +213,9 @@ ModelManifest.xml
 *.opendb
 *.filters
 
-#*.cmake
-#CMakeFiles/
-#Engine/CMakeFiles
-#Game/CMakeFiles
-#CMakeCache.txt
+# cmake-generated files
+*.cmake
+CMakeFiles/
+Engine/CMakeFiles
+Game/CMakeFiles
+CMakeCache.txt
