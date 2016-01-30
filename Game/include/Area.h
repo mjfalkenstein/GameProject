@@ -11,7 +11,7 @@ public:
 	float getHeight();
 	void setWidth(float w);
 	void setHeight(float h);
-	void setCallback(Character c, std::function<void()> f);	
+	void setCallback(Character* c, std::function<void()> f);	
 	Area();
 	Area(float w, float h);
 	Area(const Area &toCopy);
@@ -20,5 +20,5 @@ private:
 	float width;
 	float height;
 	std::function<void()> event;
-	Character character;
+	Character* character;
 };

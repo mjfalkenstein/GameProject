@@ -6,7 +6,8 @@ set(PROJECT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 # set variable containing all source files
-file(GLOB GAMELOGIC_SRCS "${PROJECT_SOURCE_DIR}/*.cpp")
+file(GLOB GAME_SRCS "${PROJECT_SOURCE_DIR}/*.cpp")
+file(GLOB GAME_HEADERS "${PROJECT_INCLUDE_DIR}/*.h")
 
 # include external headers
 include_directories("${PROJECT_INCLUDE_DIR}")
@@ -16,5 +17,5 @@ include_directories("${PROJECT_SOURCE_DIR}")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../Engine/include")
 
 # add library containing engine
-add_executable(Game ${GAMELOGIC_SRCS})
+add_executable(Game ${GAME_SRCS} ${GAME_HEADERS})
 # TODO try converting to a shared library (e.g. dll)

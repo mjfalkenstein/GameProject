@@ -10,7 +10,7 @@ float Character::getHeight() {
 	return height;
 }
 int Character::getHealth() {
-	return health
+	return health;
 }
 void Character::setWidth(float w) {
 	width = w;

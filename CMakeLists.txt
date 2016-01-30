@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
 project(GameProject)
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 if(UNIX)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++1y")
 endif()
