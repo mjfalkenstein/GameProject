@@ -4,6 +4,13 @@
 #include "Sprite.h"
 #include "Spritesheet.h"
 
+enum Direction {
+	N = 0,
+	E = 1,
+	S = 2,
+	W = 3,
+};
+
 class Character : Entity {
 
 public:
