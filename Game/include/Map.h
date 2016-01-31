@@ -5,12 +5,14 @@
 class Map {
 
 public:
-	int widh;
-	int height;
+	int w;
+	int h;
 	Tile **groundTiles;
 	Tile **decorations;
 	Tile **airTiles;
 
 	Map(int, int);
+	Map();
+	~Map();
 	void act();
 };
