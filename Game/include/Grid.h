@@ -41,7 +41,7 @@ public:
 	}
 
 	T* operator[](int x) { 
-		assert(!(x > 0 || x <= width));
+		assert(!(x < 0 || x >= width));
 		return data + x * height; 
 	};
 };
