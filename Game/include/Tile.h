@@ -6,18 +6,19 @@
 class Tile {
 
 public:
-	double movement;
-	double cover;
-	double protection;
-	double concealment;
-	double damage;
-	double flamability;
-	double rotation;
+	double movement = 1;
+	double cover = 0;
+	double protection = 0;
+	double concealment = 0;
+	double damage = 0;
+	double flamability = 0;
+	double rotation = 0;
 	Sprite* broken;
 	Sprite* sprite;
 	Sprite* border;
 	Sprite* corner;
 	Sprite* cover;
+	TileEnum tileType;
 
 	void act();
 	void changeSprite(TileEnum); //can't name it 'switch' 
