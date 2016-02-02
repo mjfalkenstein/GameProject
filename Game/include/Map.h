@@ -1,15 +1,16 @@
 #pragma once
 
 #include "Tile.h"
+#include "Grid.h"
 
 class Map {
 
 public:
-	int w;
-	int h;
-	Tile **groundTiles;
-	Tile **decorations;
-	Tile **airTiles;
+	int width;
+	int height;
+	Grid<Tile> groundTiles;
+	Grid<Tile> decorations;
+	Grid<Tile> airTiles;
 
 	Map(int, int);
 	Map();
