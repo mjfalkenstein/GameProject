@@ -1,7 +1,8 @@
 #pragma once
 
-template <class T>
+#include <assert.h>
 
+template<class T>
 class Grid {
 
 private:
