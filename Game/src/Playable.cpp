@@ -1,29 +1,29 @@
 #include "Playable.h"
 
-std::vector<Item> getInventory() {
+std::vector<Item> Playable::getInventory() {
 	return inventory;
 }
-void addItem(Item) {
+void Playable::addItem(Item) {
 
 }
-void removeItem(Item) {
+void Playable::removeItem(Item) {
 
 }
-void equip(Item) {
+void Playable::equip(Item) {
 
 }
-Stats getStats() {
+Stats Playable::getStats() {
 	return stats;
 }
-void move(Vec2f) {
+void Playable::move(Vec2f) {
 
 }
-void turn(Direction) {
+void Playable::turn(Direction) {
 
 }
-void attack(Character) {
+void Playable::attack(Character*) {
 
 }
-void use(Character, Consumable) {
+void Playable::use(Character*, Consumable) {
 
 }

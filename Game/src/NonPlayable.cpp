@@ -1,32 +1,32 @@
 #include "NonPlayable.h"
 
-std::vector<Item> getInventory() {
+std::vector<Item> NonPlayable::getInventory() {
 	return inventory;
 }
-void addItem(Item) {
+void NonPlayable::addItem(Item) {
 
 }
-void removeItem(Item) {
+void NonPlayable::removeItem(Item) {
 
 }
-void equip(Item) {
+void NonPlayable::equip(Item) {
 
 }
-Stats getStats() {
+Stats NonPlayable::getStats() {
 	return stats;
 }
-void move(Vec2f) {
+void NonPlayable::move(Vec2f) {
 
 }
-void turn(Direction) {
+void NonPlayable::turn(Direction) {
 
 }
-void attack(Character) {
+void NonPlayable::attack(Character*) {
 
 }
-void use(Character, Consumable) {
+void NonPlayable::use(Character*, Consumable) {
 
 }
-void pathTo(Vec2f) {
+void NonPlayable::pathTo(Vec2f) {
 
 }

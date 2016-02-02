@@ -17,11 +17,12 @@ public:
 	Sprite* sprite;
 	Sprite* border;
 	Sprite* corner;
-	Sprite* cover;
+//	Sprite* cover; cant name this the same thing
 	TileEnum tileType;
 
 	void act();
 	void changeSprite(TileEnum); //can't name it 'switch' 
 	void breakTile(); //also can't name this 'break', reserved words are a bitch
 	Tile(TileEnum);
+	Tile() : Tile(TileEnum::GRASS) { /* default constructor */ }
 };

@@ -18,4 +18,4 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../Engine/include")
 
 # add library containing engine
 add_executable(Game ${GAME_SRCS} ${GAME_HEADERS})
-# TODO try converting to a shared library (e.g. dll)
+target_link_libraries (Game LINK_PUBLIC Engine)
