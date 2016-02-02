@@ -15,6 +15,17 @@ namespace Graphics {
 		int x, y;				// The position in the spritesheet
 	};
 
+	class Entity {
+		virtual Sprite* getSprite() { return nullptr; }
+		virtual AABB getBounds();
+	};
+
+	class Scene {
+		void addEntity(Entity* entity);
+		void removeEntity(Entity* entity);
+		virtual void onStart() { }
+		virtual void onExit() { }
+	};
 	// Load a sprite sheet with tilesX by tilesY sprites
 	Spritesheet* loadSpriteSheet(const String& filename, int tilesX, int tilesY);
 
