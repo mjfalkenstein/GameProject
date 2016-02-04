@@ -55,7 +55,7 @@ void Scene::removeEntity(Entity* entity) {
 }
 
 Spritesheet* loadSpriteSheet(const String& filename, int tilesX, int tilesY) {
-
+  return nullptr;
 }
 
 }

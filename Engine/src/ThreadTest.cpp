@@ -5,7 +5,9 @@
 
 // Stop microsofts crusade against cstdlib (for scanf)
 // I doubt buffer overruns will matter in this test
+#ifdef _WIN32
 #pragma warning(disable: 4996)
+#endif
 
 // This is just a silly test of the thread class
 // An actual use case would be to add work to a queue

@@ -11,6 +11,9 @@ file(GLOB ENGINE_HEADERS "${PROJECT_SOURCE_DIR}/*.h")
 file(GLOB ENGINE_SRCS "${PROJECT_SOURCE_DIR}/*.cpp")
 
 # import glfw library
+set(GLFW_BUILD_EXAMPLES OFF CACHE STRING "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE STRING "" FORCE)
+set(GLFW_BUILD_DOCS OFF CACHE STRING "" FORCE)
 add_subdirectory(glfw)
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/glfw/include")
 
