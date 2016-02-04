@@ -1,6 +1,6 @@
-#include "System.h"
-// #include "Engine.h" will include System, JobManager, Graphics, Etc.
+#include "Engine.h"
 
 int main(int argc, char* argv[]) {
-	println("We did it");
+  Engine::initialize("Game", 640, 480);
+  println("We did it");
 }

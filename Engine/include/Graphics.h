@@ -17,7 +17,7 @@ namespace Graphics {
 
 	class Entity {
 		virtual Sprite* getSprite() { return nullptr; }
-		virtual AABB getBounds();
+//		virtual AABB getBounds();
 	};
 
 	class Scene {
@@ -28,7 +28,5 @@ namespace Graphics {
 	};
 	// Load a sprite sheet with tilesX by tilesY sprites
 	Spritesheet* loadSpriteSheet(const String& filename, int tilesX, int tilesY);
-
-
 
 }
